@@ -1,0 +1,23 @@
+{%- macro render_panel(title, style="left") %}
+<div class="panel">
+	<h1 class="{{ style }}">{{ title }}</h1>
+	<div class="panel-content">
+		<div class="{{ style }}">
+			{{ caller() }}
+		</div>
+	</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro render_post(link) %}
+<div class="post">
+	<h1>{{ link.comment }}</h1>
+	<div class="panel-content">
+		<a href="{{ link.url }}">{{ link.url }}</a>
+		<p>posted {{ link.date | datetimeformat }} by <a href="{{ url_for('show_user', name=link.user.name) }}">{{ link.user.name }}</a></p>
+	</div>
+</div>
+{%- endmacro %}
+

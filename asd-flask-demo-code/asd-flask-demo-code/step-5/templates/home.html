@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% import "ui.html" as ui %}
+
+{% block content %}
+	<div class="single-column-layout-50">
+		<div class="middle-column">
+			<div class = "menu">
+				<ul>
+					<li><a href="{{ url_for('post_link') }}"</a>New link</li>
+					<li><a href="{{ url_for('logout') }}">Logout</a></li>
+				</ul>
+			</div>
+
+			<h2>The latest links</h2>
+			{% for link in link_list %}
+				{{ ui.render_post(link) }}
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}

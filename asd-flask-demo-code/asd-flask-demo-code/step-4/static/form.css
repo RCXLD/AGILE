@@ -1,0 +1,22 @@
+form {
+	overflow : hidden;
+}
+
+label {
+	font-size     : 14px;
+}
+
+input{
+	margin-bottom : 8px;
+	width         : 100%;
+	border        : solid 1px SteelBlue;
+
+	/* Magic spell to avoid the right side to be eaten */
+	box-sizing: border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing: border-box;
+}
+
+button {
+	text-align    : center;
+}

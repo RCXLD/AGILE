@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+	<head>
+		<title>LINKY</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='base.css') }}">
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='panel.css') }}">
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='form.css') }}">
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<h1>LINKY</h1>
+			</div>
+
+			<div id="content">
+{% block content %}{% endblock %}
+			</div>
+		</div>
+
+		<div id="footer">
+			<h1>LINKY</h1>
+			<p>Design &amp; copyright &copy; Alexandre Devert</p>
+		</div>
+	</body>
+</html>

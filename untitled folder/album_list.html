@@ -1,0 +1,12 @@
+{%- macro render_album_list(albums) %}
+<h4>ALBUM LIST</h4>
+<ul>
+	{% for album im albums %}
+	<li><a href="{{ url_for('show_album',album_id=album.id) }}">{{ album.Name }}</a>,{{ album.YearOfPub }}</li>
+	{% else %}
+	<li>NO ALBUMS FOR THIS BAND</li>
+	{% endfor %}
+</ul>
+
+	{{ caller() }}
+{%- endmacro %}

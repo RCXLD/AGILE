@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+	<ul>
+	{% for band in bands %}
+		<li><a href="{{ url_for('show_band', band_id=band.id) }}">{{ band.Name }}</a></li>
+	{% endfor %}
+	</ul>
+	<form name='add' method='get' action="{{ url_for('create_band') }}">
+		<button type="submit"> ADD BAND </button>
+	</form>
+	
+{% endblock %}
+

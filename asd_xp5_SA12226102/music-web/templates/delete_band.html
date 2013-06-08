@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% import "album_list.html" as album_list %}
+
+{% block content %}
+	{% if error != None %}
+	</hr>
+	<p>{{ error }}</p>
+	{% else %}
+	<h3>{{ band.Name }}</h3>
+	<ul>
+	    <li>Band Name:  {{ band.Name }}</li>
+	    <li>Active time:  {{ band.FirstYearActive }} -{{ band.LastYearActive }}</li>
+	    <li>Place of Origin:  {{ band.PlaceOfOrigin }}</li>
+	    <li>Genres: 
+	        {% for gen in band.Genres %}
+	        {{ gen.Name }};
+	        {% endfor %}    
+	    </li>
+	</ul>
+    {% call album_list.render_album_list(band.Albums) %}
+    {% endcall %}
+    <h1>Are you sure to delete this band?</h1>
+    </br>
+    <form name='band' method="post" action="{{ url_for('delete_band', band_id = band.id) }}">
+    <button type="submit">Enter</button>
+    </form>
+	{% endif %}
+{% endblock %}

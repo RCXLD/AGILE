@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+    <form name='band' method="post" action="{{ url_for('create_band') }}">
+        <label>Band Name:</label>
+        <input type="text" name="name" maxlength="254" />
+        </br>
+        <label>Year of Active:</label>
+        <input type="text" name="first" maxlength="254" />-<input type="text" name="last" maxlength="254" />
+        </br>
+        <label>Place of Origin:</label>
+        <input type="text" name="PlaceofOrigin" maxlength="254" />
+        </br>
+        <button type="submit">Enter</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,188 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, hr {
+	margin         : 0;
+	padding        : 0;
+	border         : 0;
+	font-size      : 100%;
+	font           : inherit;
+	vertical-align : baseline;
+}
+
+body { 
+	font             : helvetica, arial, sans-serif;
+	color            : DarkSlateGray;
+	background-color : CornSilk; 
+	line-height      : 1;
+}
+
+
+html, body, #container { height: 100%; }
+body > #container { height: auto; min-height: 100%; }
+
+
+
+.section {
+	padding-top    : 16px;
+	padding-bottom :  8px;
+}
+
+.menu {
+	float          : left;
+	width          : 100%;
+	overflow       : hidden;
+	position       : relative;
+	padding-top    : 16px;
+	padding-bottom :  8px;
+}
+
+.menu ul {
+	clear      : left;
+	float      : left;
+	list-style : none;
+  padding    : 0;
+	position   : relative;
+	left       : 50%;
+	text-align : center;
+}
+
+.menu li {
+	display       : block;
+	float         : left;
+	list-style    : none;
+	margin        : 0;
+	padding       : 0;
+	padding-left  : 32px;
+	padding-right : 32px;
+	position      : relative;
+	right         : 50%;
+}
+
+.menu a {
+	font-size       : 18px;
+	color           : DarkSlateGray;
+	text-decoration : None;
+}
+
+
+
+h2 {
+	font-size : 18px;
+}
+
+p {
+	font-size    : 14px;
+	padding-left : 16px;
+	padding-top  : 4px;
+}
+
+
+
+/*
+	The header
+ */
+
+#header {
+	background-color    : CornSilk;
+	border-style        : none;
+	border-bottom-style : solid;
+	border-color        : RoyalBlue;
+	border-width        : 2px;
+}
+
+#header h1 {
+	font-size  : 48px;
+	text-align : center;
+}
+
+
+
+/*
+ Layout of a page's content
+ */
+
+#content {
+	clear : both;
+	padding-top : 8px;
+	padding-bottom: 48px;
+}
+
+
+
+/* Single-column layout */
+
+#content .single-column-layout-25 .middle-column {
+	margin-left  : auto;
+	margin-right : auto;
+	width        : 25%;
+}
+
+#content .single-column-layout-33 .middle-column {
+	margin-left  : auto;
+	margin-right : auto;
+	width        : 33%;
+}
+
+#content .single-column-layout-50 .middle-column {
+	margin-left  : auto;
+	margin-right : auto;
+	width        : 50%;
+}
+
+
+
+/* Two-columns 30/70 layout */
+#content .two-columns-layout .left-column {
+	float : left;
+	width : 30%;
+}
+
+#content .two-columns-layout .right-column {
+	width : 70%;
+	float : left;
+}
+
+
+
+/* Three-columns 30/40/30 layout */
+#content .three-columns-layout .left-column {
+	float : left;
+	width : 30%;
+}
+
+#content .three-columns-layout .middle-column {
+	float : left;
+	width : 40%;
+}
+
+#content .three-columns-layout .right-column {
+	width : 30%;
+	float : left;
+}
+
+
+
+/*
+	The footer
+	Use the 'sticky footer trick' from
+	http://www.lwis.net/journal/2008/02/08/pure-css-sticky-footer/
+ */
+
+#footer {
+	text-align       : center;
+	clear            : both;
+	position         : relative;
+	margin-top       : -42px;
+	background-color : Cornsilk;
+	border-style     : none;
+	border-top-style : solid;
+	border-color     : RoyalBlue;
+	border-width     : 2px;
+}
+
+#footer h1 {
+	font-size : 16px;
+}
+
+#footer p {
+	font-size : 12px;
+	padding   : 4px;
+}

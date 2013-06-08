@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% import "ui.html" as ui %}
+
+{% block content %}
+	<div class="single-column-layout-25">
+		<div class="middle-column">
+			{%- call ui.render_panel("Login", "center") -%}
+			<form name="login" method="post" action="{{ url_for('login') }}">
+				<label>Email</label>
+				<input type="text" name="email" maxlength="254"/>
+				
+				<label>Password</label>
+				<input type="password" name="password"/>
+				
+				<button type="submit">Enter</button>
+			</form>
+			{% if error is defined %}
+			<hr/>
+			<p>{{ error }}</p>
+			{% endif %}
+			{%- endcall %}
+		</div>
+	</div>
+{% endblock %}

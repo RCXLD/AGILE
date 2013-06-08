@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% import "album_list.html" as album_list %}
+
+{% block content %}
+    {% call album_list.render_album_list(albums) %}
+    {% endcall %}
+{% endblock %}

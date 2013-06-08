@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% import "ui.html" as ui %}
+
+{% block content %}
+	<div class="single-column-layout-33">
+		<div class="middle-column">
+			{%- call ui.render_panel("Login", "center") -%}
+			<form name="post" method="post" action="{{ url_for('post_link') }}">
+				<label>Link's URL</label>
+				<input type="text" name="url" maxlength="1024"/>
+				
+				<label>Comment</label>
+				<input type="text" name="comment", maxlength="1024"/>
+				
+				<button type="submit">Post link</button>
+			</form>
+			{% if error is defined %}
+			<hr/>
+			<p>{{ error }}</p>
+			{% endif %}
+			{%- endcall %}
+		</div>
+	</div>
+{% endblock %}

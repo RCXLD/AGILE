@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+	{% if error != None %}
+	</hr>
+	<p>{{ error }}</p>
+	{% else %}
+	<h4>{{ album.Name }}</h4>
+	<ul> {{ album.Name }}, {{ album.YearOfPub }}, {{ album.Label }}</ul>
+	<h4>Tracks</h4>
+	<ul>
+	    {% for track in album.Tracks %}
+	    <li>{{ track.Name }}, {{ track.Duration.__div__(60) }}:{{ track.Duration%60 }}</li>
+	    {% endfor %}
+	</ul>
+	{% endif %}
+{% endblock %}
